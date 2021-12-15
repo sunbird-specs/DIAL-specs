@@ -14,5 +14,14 @@ An open source framework for codifying (providing IDs) and linking physical lear
 2. Ability to use an online code/ID registry with resource descriptor metadata
 3. Ability to codify any physical learning resource
 4. Ability for any app to scan, obtain metadata, and provide personalized learning experience to users
-5. Already massively used across India with billions of DIAL QR codes already in cirulation
+5. Already massively used across India with billions of DIAL QR codes already in circulation
+
+## Documentation
+
+1. [Full Specification](https://github.com/sunbird-specs/DIAL-specs/blob/main/v1/spec.md) - Complete specification for DIAL
+2. [DIAL URL Specification](https://github.com/sunbird-specs/DIAL-specs/blob/main/v1/spec.md#dial-url-specification) - Specification for DIAL URL
+3. [Resource Descriptor Specification](https://github.com/sunbird-specs/DIAL-specs/blob/main/v1/spec.md#resource-descriptor-schema) - Specification for resource description of entities linked with DIAL codes
+4. [Schema Definition](https://github.com/sunbird-specs/DIAL-specs/blob/main/v1/schema.jsonld) - JSON-LD definition of custom classes & properties
+5. [Vocabulary](https://github.com/sunbird-specs/DIAL-specs/blob/main/v1/context.json) - JSON-LD context document describing the vocabulary used for DIAL codes
+6. Examples - To be added
 
