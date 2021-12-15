@@ -1,6 +1,6 @@
 # DIAL Specs
 
-DIAL stands for "Digital Infrastructure for Augmented Learning". This repository provides the DIAL URL and Resorce Descriptor Schema specifications for various learning resources that are DIAL coded. This specicication is extensively used in Sunbird-ED which is the base for India's widely adopted DIKSHA platform. 
+DIAL stands for "Digital Infrastructure for Augmented Learning". This repository provides the DIAL URL and Resorce Descriptor Schema specifications for various learning resources that are DIAL coded. This specicication is extensively used in [Sunbird-ED](https://ed.sunbird.org/) which is the base for India's widely adopted [DIKSHA platform](https://diksha.gov.in). 
 
 As part of DIKSHA, billions national and state textbook topics are QR coded using these specifications and are available for anyone who is creating learning apps to provide personalized learning experience to the user.
 
