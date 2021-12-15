@@ -1,0 +1,31 @@
+{
+    "@context": {
+        "id": "@id",
+        "type": "@type",
+    	  "schema": "http://schema.org/",
+		    "dial": "http://dial.sunbird-specs.org/",
+
+        "DIALCode": "dial:DIALCode",
+        "Entity": "dial:Entity",
+        "EntityType": "dial:EntityType",
+        "TextbookRef": "dial:TextbookRef",
+        "TextbookUnitRef": "dial:TextbookUnitRef",
+        "TextbookMetadata": "dial:TextbookMetadata",
+        "Textbook": "dial:Textbook",
+        "TextbookUnit": "dial:TextbookUnit",
+
+        "linkedTo": { "@id": "dial:linkedTo", "@type": "dial:linkedTo" },
+        "entityType": { "@id": "dial:entityType", "@type": "dial:entityType" },
+        "reference": { "@id": "dial:reference", "@type": "dial:reference" },
+        "texbookUnitRef": { "@id": "dial:texbookUnitRef", "@type": "dial:texbookUnitRef" },
+        "texbookRef": { "@id": "dial:texbookRef", "@type": "dial:texbookRef" },
+        "metadata": { "@id": "dial:metadata", "@type": "dial:metadata" },
+
+        "framework": { "@id": "dial:framework" },
+        "board": { "@id": "dial:board" },
+        "medium": { "@id": "dial:medium" },
+        "gradeLevel": { "@id": "dial:gradeLevel" },
+        "subject": { "@id": "dial:subject" },
+        "topic": { "@id": "dial:topic" }
+    }
+}
