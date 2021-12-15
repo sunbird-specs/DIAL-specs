@@ -2,8 +2,8 @@
     "@context": {
 		"rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
    		"rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    	"schema": "http://schema.org/",
-    	"xsd": "http://www.w3.org/2001/XMLSchema#",
+    		"schema": "http://schema.org/",
+    		"xsd": "http://www.w3.org/2001/XMLSchema#",
 		"dial": "http://dial.sunbird-specs.org/"
     },
     "@graph": [
@@ -62,18 +62,6 @@
             }
         },
         {
-            "@id": "dial:linkedTo",
-            "@type": "rdf:Property",
-            "rdfs:comment": "Indicates the list of entities associated with a DIAL code.",
-            "rdfs:label": "DIALCode",
-            "schema:domainIncludes": {
-                "@id": "dial:DIALCode"
-            },
-            "schema:rangeIncludes": {
-                "@id": "dial:Entity"
-            }
-        },
-        {
             "@id": "dial:Textbook",
             "@type": "dial:EntityType",
             "rdfs:comment": "Enum value for Textbook entity type.",
@@ -84,6 +72,18 @@
             "@type": "dial:EntityType",
             "rdfs:comment": "Enum value for TextbookUnit entity type.",
             "rdfs:label": "TextbookUnit"
+        },
+        {
+            "@id": "dial:linkedTo",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Indicates the list of entities associated with a DIAL code.",
+            "rdfs:label": "DIALCode",
+            "schema:domainIncludes": {
+                "@id": "dial:DIALCode"
+            },
+            "schema:rangeIncludes": {
+                "@id": "dial:Entity"
+            }
         },
         {
             "@id": "dial:entityType",
