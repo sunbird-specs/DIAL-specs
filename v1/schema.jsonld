@@ -1,0 +1,236 @@
+{
+    "@context": {
+		"rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+   		"rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    	"schema": "http://schema.org/",
+    	"xsd": "http://www.w3.org/2001/XMLSchema#",
+		"dial": "http://dial.sunbird-specs.org/"
+    },
+    "@graph": [
+        {
+            "@id": "dial:DIALCode",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Class to represent a DIAL Code.",
+            "rdfs:label": "DIALCode",
+            "rdfs:subClassOf": {
+                "@id": "schema:CreativeWork"
+            }
+        },
+        {
+            "@id": "dial:Entity",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "An entity that is associated with a DIAL code.",
+            "rdfs:label": "Entity",
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "dial:EntityType",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Enumeration of type of entities that could be associated with DIAL codes in an implementation. For example: Textbook will be the entity type when a DIAL code is used in a textbook.",
+            "rdfs:label": "EntityType",
+            "rdfs:subClassOf": {
+                "@id": "schema:Enumeration"
+            }
+        },
+        {
+            "@id": "dial:TextbookRef",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Reference to a textbook entity.",
+            "rdfs:label": "TextbookRef",
+            "rdfs:subClassOf": {
+                "@id": "schema:Book"
+            }
+        },
+        {
+            "@id": "dial:TextbookUnitRef",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Reference to a unit/chapter/section within a textbook.",
+            "rdfs:label": "TextbookUnitRef",
+            "rdfs:subClassOf": {
+                "@id": "schema:Chapter"
+            }
+        },
+        {
+            "@id": "dial:TextbookMetadata",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Class to represent a textbook metadata.",
+            "rdfs:label": "TextbookMetadata",
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "dial:linkedTo",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Indicates the list of entities associated with a DIAL code.",
+            "rdfs:label": "DIALCode",
+            "schema:domainIncludes": {
+                "@id": "dial:DIALCode"
+            },
+            "schema:rangeIncludes": {
+                "@id": "dial:Entity"
+            }
+        },
+        {
+            "@id": "dial:Textbook",
+            "@type": "dial:EntityType",
+            "rdfs:comment": "Enum value for Textbook entity type.",
+            "rdfs:label": "Textbook"
+        },
+        {
+            "@id": "dial:TextbookUnit",
+            "@type": "dial:EntityType",
+            "rdfs:comment": "Enum value for TextbookUnit entity type.",
+            "rdfs:label": "TextbookUnit"
+        },
+        {
+            "@id": "dial:entityType",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Indicates the type of entity.",
+            "rdfs:label": "entityType",
+            "schema:domainIncludes": {
+                "@id": "dial:Entity"
+            },
+            "schema:rangeIncludes": {
+                "@id": "dial:EntityType"
+            }
+        },
+        {
+            "@id": "dial:reference",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Property to specify the referred entity object.",
+            "rdfs:label": "reference",
+            "schema:domainIncludes": {
+                "@id": "dial:Entity"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "dial:TextbookRef"
+                },
+                {
+                    "@id": "dial:TextbookUnitRef"
+                }
+            ]
+        },
+        {
+            "@id": "dial:texbookUnitRef",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Property to associate textbook unit with the textbook",
+            "rdfs:label": "texbookUnitRef",
+            "schema:domainIncludes": {
+                "@id": "dial:TextbookRef"
+            },
+            "schema:rangeIncludes": {
+                "@id": "dial:TextbookUnitRef"
+            }
+        },
+        {
+            "@id": "dial:texbookRef",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Reference of the textbook to which the textbook unit belongs to",
+            "rdfs:label": "texbookRef",
+            "schema:domainIncludes": {
+                "@id": "dial:TextbookUnitRef"
+            },
+            "schema:rangeIncludes": {
+                "@id": "dial:TextbookRef"
+            }
+        },
+        {
+            "@id": "dial:metadata",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Metadata associated with a textbook or textbook unit.",
+            "rdfs:label": "texbookUnit",
+            "schema:domainIncludes": [
+                {
+                    "@id": "dial:TextbookRef"
+                },
+                {
+                    "@id": "dial:TextbookUnitRef"
+                }
+            ],
+            "schema:rangeIncludes": {
+                "@id": "dial:TextbookMetadata"
+            }
+        },
+        {
+            "@id": "dial:framework",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Taxonomy Framework of the textbook.",
+            "rdfs:label": "framework",
+            "schema:domainIncludes": {
+                "@id": "dial:TextbookMetadata"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "dial:board",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Education board affliation of the Textbook.",
+            "rdfs:label": "board",
+            "schema:domainIncludes": {
+                "@id": "dial:TextbookMetadata"
+            },
+            "schema:rangeIncludes": {
+                "@id": "schema:Text"
+            }
+        },
+        {
+            "@id": "dial:medium",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Medium(s) of instructioon of the Textbook.",
+            "rdfs:label": "medium",
+            "schema:domainIncludes": {
+                "@id": "dial:TextbookMetadata"
+            },
+            "schema:rangeIncludes": {
+                "@id": "schema:Text"
+            }
+        },
+        {
+            "@id": "dial:gradeLevel",
+            "@type": "rdf:Property",
+            "rdfs:comment": "GradeLevel of the Textbook.",
+            "rdfs:label": "gradeLevel",
+            "schema:domainIncludes": {
+                "@id": "dial:TextbookMetadata"
+            },
+            "schema:rangeIncludes": {
+                "@id": "schema:Text"
+            }
+        },
+        {
+            "@id": "dial:subject",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Subject(s) of the Textbook.",
+            "rdfs:label": "subject",
+            "schema:domainIncludes": {
+                "@id": "dial:TextbookMetadata"
+            },
+            "schema:rangeIncludes": {
+                "@id": "schema:Text"
+            }
+        },
+        {
+            "@id": "dial:topic",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Topic(s) covered in the Textbook.",
+            "rdfs:label": "topic",
+            "schema:domainIncludes": {
+                "@id": "dial:TextbookMetadata"
+            },
+            "schema:rangeIncludes": {
+                "@id": "schema:Text"
+            }
+        }
+    ]
+}
