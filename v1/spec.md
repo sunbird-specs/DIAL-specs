@@ -16,6 +16,10 @@ Publishing of a DIAL code involves the following activities:
 
 > Note that a single DIAL code can be used on more than one physical entity also.
 
+![Fig: DIAL Code Publishing](https://github.com/sunbird-specs/DIAL-specs/blob/main/v1/images/DIAL_Code_Publish.drawio.png)
+
+_Fig: DIAL Code Publishing_
+
 ## Consumption
 After the DIAL code is published, multiple apps can use that information to create personalised experiences for the users when the DIAL code is consumed:
 
@@ -23,8 +27,16 @@ After the DIAL code is published, multiple apps can use that information to crea
 2. Applications use the URL encoded in the QR code image to get the metadata of what the DIAL code is used for, i.e. the description of the physical entity.
 3. In addition to the metadata of the physical entity, applications will also have more context of who, when and where the DIAL code is used. Using both these information, the applications present relevant learning content, activities or other experiences to the user.
 
+![Fig: DIAL Code Consumption ](https://github.com/sunbird-specs/DIAL-specs/blob/main/v1/images/DIAL_code_consumption.drawio.png)
+
+_Fig: DIAL Code Consumption_
+
 # NDEAR Use Case
 The below diagram illustrates how the DIAL code specifications can be used in the context of Indian education.
+
+![Fig: NDEAR DIAL Registry](https://github.com/sunbird-specs/DIAL-specs/blob/main/v1/images/QR%20and%20Discovery%20infographics.png)
+
+_Fig: NDEAR DIAL Registry_
 
 In the above diagram, the left side illustrates the DIAL code publishing and the right side shows the DIAL code consumption. Multiple applications (by governments, NGOs and private players) can be built for different use cases like Foundational Learning (FLN), remedial activities, Exam preparation, etc.
 
@@ -37,7 +49,9 @@ DIAL specification defines the standards/protocol for the following:
 ## DIAL URL Specification
 The URL for DIAL codes shall be in the following format:
 
-> \<protocol>://<dial_registry_domain>/DIAL/<spec_version_number>/<dial_code_value> 
+```
+<protocol>://<dial_registry_domain>/DIAL/<spec_version_number>/<dial_code_value> 
+```
 
 - **protocol**: the protocol should be _**https**_ for usage in production versions. _**http**_ can be used for development or testing purposes.
 - **dial_registry_domain**: this should be the domain where the DIAL registry is hosted.
