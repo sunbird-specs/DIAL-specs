@@ -58,7 +58,7 @@ The URL for DIAL codes shall be in the following format:
 - **spec_version_number**: currently, _**v1**_ should be used as the specification version number.
 - **dial_code_value**: this is the actual value of the dial code generated in the publishing process. The generated dial codes should not contain any characters that are not allowed in HTTP URLs or require encoding to be embedded in the URL (e.g.: characters like &, <, >, etc). It is recommended to use only alphabets and numbers in the dial code values.
 
-_Examples_:
+### Examples
 - DIAL code URL in DIKSHA DIAL registry: https://diksha.gov.in/DIAL/v1/WYG392
 - DIAL code URL in SWAYAM DIAL registry: https://swayam.gov.in/DIAL/v1/872IUWY82
 - DIAL code URL in a private publisher registry: https://example.com/DIAL/v1/SHIWY2329
@@ -72,18 +72,36 @@ The DIAL resource descriptor schema specification uses the following standards f
 - The specification uses (and in some places extends) the vocabulary of Classes and Properties described by schema.org.
 - Additionally, the specification defines some new classes. Each class used in the specification must be defined in terms of an RDF schema. Implementations of this spec need to publish the schema at a specific web URL for validation and consumption of DIAL resource descriptor data.
 
-### Class Definitions
-The schema defines the following new classes to be used for resource description:
-- Publisher
-- LinkedEntity
-- Textbook Chapter
-- TaxonomyData
+### Schema Extensions
+The schema defines the following new classes & properties for resource description:
 
-Link to schema definition
+**Classes:**
+- DIALCode: represents a DIAL Code object. 
+- Entity: represents an entity associated with a DIAL code.
+- EntityType: enumeration of entity types supported in this implementation.
+
+**Properties:**
+- linkedTo: to specify the entity object linked to a DIAL code
+- entityType: to specify the type of entity linked to a DIAL code
+- reference: to provide reference to an entity instance (e.g. a specific textbook or textbook unit)
+- metadata: to define the metadata of the linked entity
+
+In addition to the above classes and properties, the specification also defines specific classes & properties for specific use cases. For example, following classes and properties are defined to represent textbooks and textbook units linked with DIAL codes:
+
+- Textbook & TextbookUnit: enum values for the EntityType enumeration
+- TextbookRef: reference to a textbook entity
+- TextbookUnitRef: reference to textbook unit entity
+- TextbookMetadata: metadata of a textbook or textbook unit
+
+- textbookUnitRef: to specify association between a textbook and a textbook unit
+- textbookRef: to specify the textbook to which a textbook unit belongs to
+- framework, board, medium, gradeLevel, subject & topic: to specify the taxonomy framework metadata of textbooks and textbook units
+
+[Link to schema definition](https://github.com/sunbird-specs/DIAL-specs/blob/main/v1/schema.jsonld)
 
 ### Vocabulary
-This document describes the vocabulary used for representing resource descriptions.
+This [document](https://github.com/sunbird-specs/DIAL-specs/blob/main/v1/context.json) describes the vocabulary used for representing resource descriptions.
 
-### Examples
+
 
 
