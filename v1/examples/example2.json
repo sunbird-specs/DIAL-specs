@@ -1,7 +1,7 @@
 {
     "_comment": "Example JSON object for a DIAL code published by NCERT and linked to CBSE Class 1 English textbook",
     "@context": "https://raw.githubusercontent.com/sunbird-specs/DIAL-specs/main/v1/context.json#",
-    "@id": "https://diksha/gov.in/DIAL/v1/JEU210",
+    "@id": "https://diksha/gov.in/DIAL/JEU210",
     "@type": "DIALCode",
     "publisher": {
         "@type": "Organization",

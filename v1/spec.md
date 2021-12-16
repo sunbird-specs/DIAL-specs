@@ -50,18 +50,27 @@ DIAL specification defines the standards/protocol for the following:
 The URL for DIAL codes shall be in the following format:
 
 ```
-<protocol>://<dial-registry-domain>/DIAL/<spec-version-number>/<dial-code-value> 
+<protocol>://<dial-registry-domain>/DIAL/<dial-code-value> 
 ```
 
 - **_protocol_**: the protocol should be **_https_** for usage in production versions. **_http_** can be used for development or testing purposes.
 - **_dial-registry-domain_**: this should be the domain where the DIAL registry is hosted.
-- **_spec-version-number_**: currently, **_v1_** should be used as the specification version number.
 - **_dial-code-value_**: this is the actual value of the dial code generated in the publishing process. The generated dial codes should not contain any characters that are not allowed in HTTP URLs or require encoding to be embedded in the URL (e.g.: characters like &, <, >, etc). It is recommended to use only alphabets and numbers in the dial code values.
 
 ### Examples
-- DIAL code URL in DIKSHA DIAL registry: https://diksha.gov.in/DIAL/v1/WYG392
-- DIAL code URL in SWAYAM DIAL registry: https://swayam.gov.in/DIAL/v1/872IUWY82
-- DIAL code URL in a private publisher registry: https://example.com/DIAL/v1/SHIWY2329
+- DIAL code URL in DIKSHA DIAL registry: https://diksha.gov.in/DIAL/WYG392
+- DIAL code URL in SWAYAM DIAL registry: https://swayam.gov.in/DIAL/872IUWY82
+- DIAL code URL in a private publisher registry: https://example.com/DIAL/SHIWY2329
+
+DIAL Registry should return the resource descriptor of the entity linked with the DIAL code when this URL is accessed. To get the resource descriptor in JSON-LD format, consumption apps need to send the HTTP request header `accept: application/json` while invoking the DIAL Code URL:
+
+```
+curl -X GET -H 'accept: application/json' <protocol>://<dial-registry-domain>/DIAL/<dial-code-value>
+
+Example: curl -X GET -H 'accept: application/json' https://diksha.gov.in/DIAL/6J19X 
+```
+
+The response to the DIAL code URL will contain the resource descriptor as per the JSON-LD specification defined in the next section.
 
 ## Resource Descriptor Schema
 The DIAL resource descriptor schema specification uses the following standards for defining a resource (entity):
