@@ -87,6 +87,7 @@ The schema defines the following new classes & properties for resource descripti
 - metadata: to define the metadata of the linked entity
 
 **Linking Textbooks**
+
 In addition to the above, the specification also defines classes & properties for using DIAL codes in school textbooks. The following classes and properties are defined to represent textbooks and textbook units linked with DIAL codes:
 
 - Textbook & TextbookUnit: enum values for the EntityType enumeration
@@ -98,11 +99,13 @@ In addition to the above, the specification also defines classes & properties fo
 - textbookRef: to specify the textbook to which a textbook unit belongs to
 - framework, board, medium, gradeLevel, subject & topic: to specify the taxonomy framework metadata of textbooks and textbook units
 
-[Link to schema definition](https://github.com/sunbird-specs/DIAL-specs/blob/main/v1/schema.jsonld)
+[JSON-LD Schema Definition](https://github.com/sunbird-specs/DIAL-specs/blob/main/v1/schema.jsonld)
 
 ### Vocabulary
 This [document](https://github.com/sunbird-specs/DIAL-specs/blob/main/v1/context.json) describes the vocabulary used for representing resource descriptions.
 
+### Examples
 
-
+1. [DIAL code published by NCERT and linked to a chapter in CBSE Class 1 English textbook](https://github.com/sunbird-specs/DIAL-specs/blob/main/v1/examples/example1.json)
+2. [DIAL code published by NCERT and linked to CBSE Class 1 English textbook](https://github.com/sunbird-specs/DIAL-specs/blob/main/v1/examples/example2.json)
 

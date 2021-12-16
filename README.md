@@ -23,5 +23,5 @@ An open source framework for codifying (providing IDs) and linking physical lear
 3. [Resource Descriptor Specification](https://github.com/sunbird-specs/DIAL-specs/blob/main/v1/spec.md#resource-descriptor-schema) - Specification for resource description of entities linked with DIAL codes
 4. [Schema Definition](https://github.com/sunbird-specs/DIAL-specs/blob/main/v1/schema.jsonld) - JSON-LD definition of custom classes & properties
 5. [Vocabulary](https://github.com/sunbird-specs/DIAL-specs/blob/main/v1/context.json) - JSON-LD context document describing the vocabulary used for DIAL codes
-6. Examples - To be added
+6. [Examples](https://github.com/sunbird-specs/DIAL-specs/tree/main/v1/examples)
 
