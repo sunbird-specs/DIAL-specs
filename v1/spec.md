@@ -50,13 +50,13 @@ DIAL specification defines the standards/protocol for the following:
 The URL for DIAL codes shall be in the following format:
 
 ```
-<protocol>://<dial_registry_domain>/DIAL/<spec_version_number>/<dial_code_value> 
+<protocol>://<dial-registry-domain>/DIAL/<spec-version-number>/<dial-code-value> 
 ```
 
-- **protocol**: the protocol should be _**https**_ for usage in production versions. _**http**_ can be used for development or testing purposes.
-- **dial_registry_domain**: this should be the domain where the DIAL registry is hosted.
-- **spec_version_number**: currently, _**v1**_ should be used as the specification version number.
-- **dial_code_value**: this is the actual value of the dial code generated in the publishing process. The generated dial codes should not contain any characters that are not allowed in HTTP URLs or require encoding to be embedded in the URL (e.g.: characters like &, <, >, etc). It is recommended to use only alphabets and numbers in the dial code values.
+- **_protocol_**: the protocol should be **_https_** for usage in production versions. **_http_** can be used for development or testing purposes.
+- **_dial-registry-domain_**: this should be the domain where the DIAL registry is hosted.
+- **_spec-version-number_**: currently, **_v1_** should be used as the specification version number.
+- **_dial-code-value_**: this is the actual value of the dial code generated in the publishing process. The generated dial codes should not contain any characters that are not allowed in HTTP URLs or require encoding to be embedded in the URL (e.g.: characters like &, <, >, etc). It is recommended to use only alphabets and numbers in the dial code values.
 
 ### Examples
 - DIAL code URL in DIKSHA DIAL registry: https://diksha.gov.in/DIAL/v1/WYG392
@@ -86,7 +86,8 @@ The schema defines the following new classes & properties for resource descripti
 - reference: to provide reference to an entity instance (e.g. a specific textbook or textbook unit)
 - metadata: to define the metadata of the linked entity
 
-In addition to the above classes and properties, the specification also defines specific classes & properties for specific use cases. For example, following classes and properties are defined to represent textbooks and textbook units linked with DIAL codes:
+**Linking Textbooks**
+In addition to the above, the specification also defines classes & properties for using DIAL codes in school textbooks. The following classes and properties are defined to represent textbooks and textbook units linked with DIAL codes:
 
 - Textbook & TextbookUnit: enum values for the EntityType enumeration
 - TextbookRef: reference to a textbook entity
